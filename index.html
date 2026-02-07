@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff6b9d'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Valentine's Day 💕</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="min-h-screen bg-background overflow-x-hidden">
+      <!-- Floating Hearts Container -->
+      <div id="floating-hearts" class="fixed inset-0 overflow-hidden pointer-events-none z-0"></div>
+
+      <!-- Hero Section -->
+      <section class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="hero-gradient absolute inset-0 z-0"></div>
+        <div class="hero-glow absolute inset-0 z-0 opacity-60"></div>
+        
+        <div class="container relative z-10 px-4 text-center pt-12 sm-pt-0">
+          <div class="mb-6 sm-mb-8 fade-in">
+            <svg class="w-12 sm-w-16 h-12 sm-h-16 mx-auto text-primary heart-pulse" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+          <p class="text-muted-foreground uppercase tracking-widest text-xs sm-text-sm mb-4 sm-mb-6 fade-in-delay-1">
+            February 14th, 2025
+          </p>
+          <h1 class="text-4xl sm-text-5xl md-text-7xl font-display font-light mb-6 sm-mb-8 leading-tight fade-in-delay-2">
+            <span class="block">Happy</span>
+            <span class="text-romantic italic font-medium">Valentine's</span>
+            <span class="block">Day</span>
+          </h1>
+          <p class="text-base sm-text-lg md-text-xl text-muted-foreground max-w-xl mx-auto font-light leading-relaxed mb-8 sm-mb-12 px-4 fade-in-delay-3">
+            Celebrate love in all its beautiful forms. May your heart be filled with warmth and joy.
+          </p>
+          
+          <!-- Love Question -->
+          <div id="love-question" class="relative fade-in-delay-4">
+            <div id="question-content">
+              <p class="text-xl sm-text-2xl md-text-3xl font-display text-foreground mb-6 sm-mb-8 px-4">
+                Do you love me? 💖
+              </p>
+              <div class="flex items-center justify-center gap-4 sm-gap-6 relative h-24 sm-h-20">
+                <button id="yes-btn" class="px-6 sm-px-10 py-3 sm-py-4 bg-primary text-primary-foreground rounded-full font-semibold text-base sm-text-lg shadow-lg hover-shadow-xl transition-shadow romantic-glow">
+                  Yes 💕
+                </button>
+                <button id="no-btn" class="px-6 sm-px-10 py-3 sm-py-4 bg-muted text-muted-foreground rounded-full font-semibold text-base sm-text-lg border border-border hover-border-primary transition-colors">
+                  No 😢
+                </button>
+              </div>
+            </div>
+            <div id="answer-content" class="text-center hidden">
+              <svg class="w-12 sm-w-16 h-12 sm-h-16 mx-auto text-primary mb-4 heart-scale" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+              <p class="text-xl sm-text-2xl font-display text-foreground">I knew it! 💕</p>
+              <p class="text-muted-foreground mt-2 text-sm sm-text-base">You're amazing!</p>
+            </div>
+          </div>
+          <!-- Heart explosion container -->
+          <div id="heart-explosion" class="fixed inset-0 pointer-events-none z-50 overflow-hidden hidden"></div>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 right-0 h-32">
+          <svg viewBox="0 0 1440 120" class="w-full h-full" preserveAspectRatio="none">
+            <path d="M0,64 C480,120 960,0 1440,64 L1440,120 L0,120 Z" fill="hsl(350, 25%, 10%)" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- Love Quotes Section -->
+      <section class="py-12 sm-py-24 bg-card relative overflow-hidden">
+        <div class="absolute top-6 left-6 sm-top-12 sm-left-12 opacity-10">
+          <svg class="w-16 sm-w-24 h-16 sm-h-24 text-primary" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <div class="absolute bottom-6 right-6 sm-bottom-12 sm-right-12 opacity-10">
+          <svg class="w-20 sm-w-32 h-20 sm-h-32 text-primary" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        
+        <div class="container px-4">
+          <div class="text-center mb-8 sm-mb-16 scroll-animate">
+            <svg class="w-8 sm-w-10 h-8 sm-h-10 mx-auto text-primary mb-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <h2 class="text-3xl sm-text-4xl md-text-5xl font-display font-light">Words of <span class="text-romantic italic">Love</span></h2>
+          </div>
+          <div class="grid gap-6 sm-gap-8 md-grid-cols-3 max-w-6xl mx-auto">
+            <div class="quote-card relative bg-background rounded-2xl p-6 sm-p-8 shadow-soft hover-shadow-lg transition-shadow scroll-animate">
+              <svg class="w-6 sm-w-8 h-6 sm-h-8 text-rose-light mb-3 sm-mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"/>
+                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+              </svg>
+              <p class="text-foreground font-display text-lg sm-text-xl italic leading-relaxed mb-4 sm-mb-6">"The best thing to hold onto in life is each other."</p>
+              <p class="text-muted-foreground font-medium text-sm sm-text-base">— Audrey Hepburn</p>
+              <div class="absolute -bottom-3 -right-3 w-8 h-8 bg-primary-10 rounded-full"></div>
+            </div>
+            <div class="quote-card relative bg-background rounded-2xl p-6 sm-p-8 shadow-soft hover-shadow-lg transition-shadow scroll-animate" style="animation-delay: 0.2s;">
+              <svg class="w-6 sm-w-8 h-6 sm-h-8 text-rose-light mb-3 sm-mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"/>
+                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+              </svg>
+              <p class="text-foreground font-display text-lg sm-text-xl italic leading-relaxed mb-4 sm-mb-6">"Love is composed of a single soul inhabiting two bodies."</p>
+              <p class="text-muted-foreground font-medium text-sm sm-text-base">— Aristotle</p>
+              <div class="absolute -bottom-3 -right-3 w-8 h-8 bg-primary-10 rounded-full"></div>
+            </div>
+            <div class="quote-card relative bg-background rounded-2xl p-6 sm-p-8 shadow-soft hover-shadow-lg transition-shadow scroll-animate" style="animation-delay: 0.4s;">
+              <svg class="w-6 sm-w-8 h-6 sm-h-8 text-rose-light mb-3 sm-mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"/>
+                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+              </svg>
+              <p class="text-foreground font-display text-lg sm-text-xl italic leading-relaxed mb-4 sm-mb-6">"You know you're in love when you can't fall asleep because reality is finally better than your dreams."</p>
+              <p class="text-muted-foreground font-medium text-sm sm-text-base">— Dr. Seuss</p>
+              <div class="absolute -bottom-3 -right-3 w-8 h-8 bg-primary-10 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Date Ideas Section -->
+      <section class="py-12 sm-py-24 relative overflow-hidden">
+        <div class="romantic-overlay absolute inset-0 opacity-30"></div>
+        <div class="container relative z-10 px-4">
+          <div class="text-center mb-8 sm-mb-12 scroll-animate">
+            <svg class="w-8 sm-w-10 h-8 sm-h-10 mx-auto text-primary mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+              <path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/>
+            </svg>
+            <h2 class="text-3xl sm-text-4xl md-text-5xl font-display font-light">Valentine's <span class="text-romantic italic">Date Ideas</span></h2>
+            <p class="text-muted-foreground mt-4 max-w-md mx-auto text-sm sm-text-base px-4">Spin the wheel of love and discover your perfect date activity</p>
+          </div>
+          
+          <div class="max-w-md mx-auto scroll-animate">
+            <div id="date-idea-display" class="min-h-240 sm-min-h-280 flex items-center justify-center mb-6 sm-mb-8">
+              <div id="date-idea-empty" class="w-full bg-card-50 rounded-3xl p-8 sm-p-12 border-2 border-dashed border-border text-center">
+                <svg class="w-12 sm-w-16 h-12 sm-h-16 mx-auto text-rose-light mb-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                <p class="text-muted-foreground font-display text-base sm-text-lg">Click below to discover your date idea!</p>
+              </div>
+              <div id="date-idea-card" class="w-full bg-card rounded-3xl p-6 sm-p-8 shadow-lg border border-border text-center hidden">
+                <span id="date-idea-emoji" class="text-5xl sm-text-6xl mb-3 sm-mb-4 block"></span>
+                <h3 id="date-idea-title" class="text-xl sm-text-2xl font-display text-foreground mb-2 sm-mb-3"></h3>
+                <p id="date-idea-description" class="text-muted-foreground leading-relaxed text-sm sm-text-base"></p>
+                <div id="date-idea-perfect" class="mt-6 flex items-center justify-center gap-2 text-primary hidden">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                  <span class="text-sm font-medium">Perfect for you!</span>
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <button id="pick-date-btn" class="w-full py-3 sm-py-4 bg-primary text-primary-foreground rounded-xl font-medium flex items-center justify-center gap-2 sm-gap-3 hover-shadow-lg transition-all romantic-glow text-sm sm-text-base">
+              <svg id="shuffle-icon" class="w-4 sm-w-5 h-4 sm-h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/>
+                <path d="m18 2 4 4-4 4"/><path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"/>
+                <path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"/><path d="m18 14 4 4-4 4"/>
+              </svg>
+              <span id="pick-date-text">Pick a Date Idea</span>
+            </button>
+            <div class="mt-6 sm-mt-8 flex flex-wrap justify-center gap-2" id="quick-picks">
+              <button class="emoji-btn text-xl sm-text-2xl p-2 bg-card rounded-full hover-scale-110 transition-transform border border-border hover-border-primary" data-index="0">🌹</button>
+              <button class="emoji-btn text-xl sm-text-2xl p-2 bg-card rounded-full hover-scale-110 transition-transform border border-border hover-border-primary" data-index="1">🎬</button>
+              <button class="emoji-btn text-xl sm-text-2xl p-2 bg-card rounded-full hover-scale-110 transition-transform border border-border hover-border-primary" data-index="2">🌅</button>
+              <button class="emoji-btn text-xl sm-text-2xl p-2 bg-card rounded-full hover-scale-110 transition-transform border border-border hover-border-primary" data-index="3">💃</button>
+              <button class="emoji-btn text-xl sm-text-2xl p-2 bg-card rounded-full hover-scale-110 transition-transform border border-border hover-border-primary" data-index="4">📝</button>
+              <button class="emoji-btn text-xl sm-text-2xl p-2 bg-card rounded-full hover-scale-110 transition-transform border border-border hover-border-primary" data-index="5">🧁</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-8 sm-py-12 bg-card border-t border-border">
+        <div class="container px-4">
+          <div class="text-center scroll-animate">
+            <div class="flex items-center justify-center gap-2 mb-4 flex-wrap">
+              <span class="text-muted-foreground font-light text-sm sm-text-base">Made with</span>
+              <svg class="w-4 sm-w-5 h-4 sm-h-5 text-primary heart-pulse" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+              <span class="text-muted-foreground font-light text-sm sm-text-base">for Valentine's Day</span>
+            </div>
+            <p class="text-xs sm-text-sm text-muted-foreground px-4">Spread love, kindness, and joy to everyone around you</p>
+            <div class="mt-8 flex items-center justify-center gap-1">
+              <svg class="w-3 h-3 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+              <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+              <svg class="w-3 h-3 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
